@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -84,6 +85,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -91,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "743bb002-2c07-4015-bfb7-e7382eaf84f3"
   }
 }

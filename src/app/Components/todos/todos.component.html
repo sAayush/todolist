@@ -1,0 +1,36 @@
+<app-add-todo (addTodo)="AddTodo($event)"></app-add-todo>
+<div *ngIf="this.todos.length === 0; else elseBlock" class=" text-3xl justify-center text-center text-zinc-400">No todos</div>
+    <ng-template #elseBlock>
+        <div class="relative overflow-x-auto shadow-md">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            SNO
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Tittle
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Discription
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </ng-template>
+
+<div *ngFor="let todo of todos">
+    <div *ngIf="(todo.completed) == false">
+        <app-todo [todo]="todo" (CompleteTodo)="CompleteTodo($event)"></app-todo>
+    </div>
+</div>
+<div *ngFor="let todo of todos">
+    <div *ngIf="(todo.completed) == true">
+        <app-todo [todo]="todo" (DeleteTodo)="DeleteTodo($event)"></app-todo>
+    </div>
+</div>
+
