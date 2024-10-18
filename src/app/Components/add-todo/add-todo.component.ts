@@ -26,3 +26,4 @@ export class AddTodoComponent {
     this.addTodo.emit(todo);
   }
 }
+
